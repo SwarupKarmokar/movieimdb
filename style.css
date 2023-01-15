@@ -29,7 +29,7 @@ img {
 /* WRAPPER CONTAINER STYLING START */
 .wrapper-container {
     min-height: 100vh;
-    background-color: var(--dark-color);
+    background: linear-gradient(to left bottom, rgb(83, 40, 169), red);
 }
 
 .wrapper-container .container {
@@ -45,7 +45,8 @@ img {
 /* Search container */
 
 .search-container {
-    background-color: var(--md-dark-color);
+    /* background-color: var(--md-dark-color); */
+    background-color: gray;
     height: 188px;
     display: flex;
     align-items: center;
@@ -129,7 +130,7 @@ img {
     background-color: var(--light-dark-color);
     padding: 0.5rem;
     border-bottom: 1px solid var(--dark-color);
-    width: 800px;
+    width: 790px;
     border-radius: 12px;
     color: #fff;
     cursor: pointer;
@@ -246,5 +247,13 @@ img {
 @media screen and (width < 765px) {
     #result-grid {
         flex-wrap: wrap;
+    }
+
+    .search-element .form-control {
+        width: 400px;
+    }
+
+    .search-list .search-list-item {
+        width: 390px;
     }
 }
