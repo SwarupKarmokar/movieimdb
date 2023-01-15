@@ -1,0 +1,250 @@
+/* GIVING UNIVERSHAL CSS TO THE ELEMENT  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* CREATING VARIABLE GLOBALLY FOR LATER USE */
+:root {
+    --md-dark-color: #1d1d1d;
+    --dark-color: #171717;
+    --light-dark-color: #292929;
+    --yellow-color: #d4aa11;
+}
+
+/* GIVING BODY FONT FAMILY  */
+body {
+    font-family: cursive;
+}
+
+/* STYLING IMG TAG  */
+img {
+    width: 100%;
+    display: block;
+}
+
+/* WRAPPER CONTAINER STYLING START */
+.wrapper-container {
+    min-height: 100vh;
+    background-color: var(--dark-color);
+}
+
+.wrapper-container .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* WRAPPER CONTAINER STYLING ENDS */
+
+
+
+/* Search container */
+
+.search-container {
+    background-color: var(--md-dark-color);
+    height: 188px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-dark-color);
+}
+
+.logo a {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.logo a {
+    font-size: 2rem;
+    color: rgb(246, 242, 242);
+    font-weight: bold;
+}
+
+
+
+
+.nav-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#span {
+    color: red;
+}
+
+#logo {
+    flex: 1;
+}
+
+
+/* SEARCH ELEMENT STYLING STARTS  */
+
+.search-element {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.search-element h1 {
+    align-self: center;
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.search-element .form-control {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    width: 800px;
+    color: var(--light-dark-color);
+}
+
+.search-list {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    z-index: 10;
+}
+
+.search-list .search-list-item {
+    background-color: var(--light-dark-color);
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--dark-color);
+    width: 800px;
+    border-radius: 12px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+#movie-search-box {
+    text-align: center;
+    border-radius: 12px;
+}
+
+.search-list .search-list-item:hover {
+    background-color: #1f1f1f;
+}
+
+.search-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.search-item-thumbnail img {
+    width: 40px;
+    margin-right: 1rem;
+}
+
+.search-item-info h3 {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.search-item-info p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    opacity: 0.6;
+}
+
+/* thumbnail */
+.search-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.search-list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.search-list::-webkit-scrollbar-thumb {
+    background-color: var(--yellow-color);
+    outline: none;
+    border-radius: 10px;
+}
+
+/* js related class */
+.hide-search-list {
+    display: none;
+}
+
+/* SEARCH ELEMENT STYLING STARTS  */
+
+
+/* RESULT PAGE STYLE STARTS  */
+.result-container {
+    padding: 3rem 0;
+}
+
+#result-grid {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 150px;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.movie-poster {
+    width: 100%;
+}
+
+.movie-poster img {
+    box-shadow: 0 0 10px 2px gray;
+    border-radius: 10px;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    color: #fff;
+}
+
+.movie-title {
+    font-size: 2rem;
+}
+
+
+#addToFav {
+    padding: 5px 10px;
+    background: lightgreen;
+    font-size: 1.2rem;
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+    border-radius: 12px;
+    transition: .4s ease-in-out;
+}
+
+#addToFav:hover {
+    background-color: green;
+}
+
+/* RESULT PAGE STYLE ENDS  */
+
+/* MEDIA SCREEN FOR RESPONSIVENESS  */
+@media screen and (width < 765px) {
+    #result-grid {
+        flex-wrap: wrap;
+    }
+}

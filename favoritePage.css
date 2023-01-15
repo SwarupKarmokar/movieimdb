@@ -1,0 +1,40 @@
+/* ADDING SOME GRID STYLE FOR FAVORITE MOVIE  */
+.result-grid {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    border-bottom: 1px solid rgb(217, 120, 120);
+}
+
+/* GIVING MOVIE POSTER SOME STYLE  */
+.movie-poster{
+    width: 30%;
+}
+
+/* GIVING STYLE TO THE INFORMATION PART  */
+.movie-info {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* GIVING STYLING TO THE DELETE BUTTON */
+.delete-btn {
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    bottom: 0.5%;
+    right: 0.5%;
+    cursor: pointer;
+}
+
+/* MEDIA SCREEN FOR RESPONSIVENESS */
+@media screen and (width < 765px){
+    .result-grid {
+        flex-wrap: wrap;
+    }
+}
