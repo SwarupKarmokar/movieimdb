@@ -1,9 +1,9 @@
 // IMPORTING ALL NECCESSERY ELEMENT FROM HTML USING DOM 
-let movieID = localStorage.getItem('movieID'); 
+let movieID = localStorage.getItem('movieID');
 const addToFavBtn = document.querySelector('#addToFav');
 
-let favMovies = JSON.parse(localStorage.getItem('favMovies')); 
-const resultGrid = document.querySelector('#result-grid'); 
+let favMovies = JSON.parse(localStorage.getItem('favMovies'));
+const resultGrid = document.querySelector('#result-grid');
 
 
 //CREATING A FUNCTION WHICH SHOWING MOVIE DETAILS IN THE PAGE
@@ -31,9 +31,9 @@ const displayMovies = (details) => {
 
 // THIS FUCTION GETS ALL THE DATA FROM SERVER 
 async function getData(movieID) {
-    const result = await fetch(`http://www.omdbapi.com/?i=${movieID}&apikey=e957ce28`); 
-    const movieDetails = await result.json(); 
-    displayMovies(movieDetails); 
+    const result = await fetch(`http://www.omdbapi.com/?i=${movieID}&apikey=e957ce28`);
+    const movieDetails = await result.json();
+    displayMovies(movieDetails);
 }
 
 //THIS BUTTON IS CREATED FOR SHOWING IS THE MOVIE ADDED IN FAVORITE PAGE OR NOT 
@@ -53,7 +53,7 @@ const addToFav = () => {
         addToFavBtn.textContent = 'Already Added To Favourites';
     } else {
         favMovies.push(movieID);
-        localStorage.setItem('favMovies', JSON.stringify(favMovies)); 
+        localStorage.setItem('favMovies', JSON.stringify(favMovies));
     }
 
 }

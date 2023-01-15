@@ -8,7 +8,7 @@
 }
 
 /* GIVING MOVIE POSTER SOME STYLE  */
-.movie-poster{
+.movie-poster {
     width: 30%;
 }
 
@@ -33,7 +33,7 @@
 }
 
 /* MEDIA SCREEN FOR RESPONSIVENESS */
-@media screen and (width < 765px){
+@media screen and (width < 765px) {
     .result-grid {
         flex-wrap: wrap;
     }

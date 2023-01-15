@@ -59,31 +59,31 @@ const displayMovies = (movies) => {
     }
 }
 
-    // LOADING THE MOVIE DETAILS
-    const loadMovieDetails = () => {
-        const searchListMovies = searchList.querySelectorAll('.search-list-item');
+// LOADING THE MOVIE DETAILS
+const loadMovieDetails = () => {
+    const searchListMovies = searchList.querySelectorAll('.search-list-item');
 
-        searchListMovies.forEach(movie => {
-            movie.addEventListener('click', async () => {
-                searchList.classList.add('hide-search-list');
-                movieSearchBox.value = "";
-                localStorage.setItem('movieID', movie.dataset.id);
-                let dir = window.location.origin + "moviePage.html";
-                window.location.href = "moviePage.html";
-                // let dir = window.location.origin + "/1234/MoviePage/moviePage.html";
-                // window.location.href = "https://swarupkarmokar.github.io/1234/MoviePage/moviePage.html";
-            })
-        })
-    }
-
-
-    // CREATING EVENT LISTENER 
-    window.addEventListener('click', (e) => {
-        if (e.target.className != 'form-control') {
+    searchListMovies.forEach(movie => {
+        movie.addEventListener('click', async () => {
             searchList.classList.add('hide-search-list');
-        }
+            movieSearchBox.value = "";
+            localStorage.setItem('movieID', movie.dataset.id);
+            let dir = window.location.origin + "moviePage.html";
+            window.location.href = "moviePage.html";
+            // let dir = window.location.origin + "/1234/MoviePage/moviePage.html";
+            // window.location.href = "https://swarupkarmokar.github.io/1234/MoviePage/moviePage.html";
+        })
     })
+}
 
-    // WHEN PERSON TYPE WORD ITS AUTOMATICALLY SEARCH MOVIE BY EACH WORD 
-    movieSearchBox.addEventListener('keyup', findMovies);
-    movieSearchBox.addEventListener('click', findMovies);
+
+// CREATING EVENT LISTENER 
+window.addEventListener('click', (e) => {
+    if (e.target.className != 'form-control') {
+        searchList.classList.add('hide-search-list');
+    }
+})
+
+// WHEN PERSON TYPE WORD ITS AUTOMATICALLY SEARCH MOVIE BY EACH WORD 
+movieSearchBox.addEventListener('keyup', findMovies);
+movieSearchBox.addEventListener('click', findMovies);
