@@ -10,7 +10,7 @@ if (!localStorage.getItem('favMovies')) {
 }
 // LOADING OMDB API
 async function loadMovies(searchTerm) {
-    const URL = `http://www.omdbapi.com/?s=${searchTerm}&page=1&apikey=755f786c`;
+    const URL = `http://www.omdbapi.com/?s=${searchTerm}&page=1&apikey=e957ce28`;
     const res = await fetch(`${URL}`);
     const data = await res.json();
 
