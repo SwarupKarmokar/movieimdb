@@ -31,7 +31,7 @@ const displayMovies = (details) => {
 
 // THIS FUCTION GETS ALL THE DATA FROM SERVER 
 async function getData(movieID) {
-    const result = await fetch(`http://www.omdbapi.com/?i=${movieID}&apikey=e957ce28`);
+    const result = await fetch(`https://www.omdbapi.com/?i=${movieID}&apikey=e957ce28`);
     const movieDetails = await result.json();
     displayMovies(movieDetails);
 }
